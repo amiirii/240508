@@ -10,7 +10,7 @@ class Jugador:
         if self.tipo == 'm':
             self.numero = random.randrange(0, 100)
         else:
-            self.numero = input('(). ¿cuál es tu número?', format(self.nombre))
+            self.numero = input('{}, ¿cuál es tu número?'.format(self.nombre))
 
     def comprueba(self, num):
         if num == self.numero:
@@ -38,7 +38,7 @@ if __name__ == '__main__':
         maquina.piensa()
         r = 0
         while r != 1:
-            print('**Turno ', i, '**')
+            print('** Turno ', i, '**')
 
             j1.piensa()
 
