@@ -10,3 +10,5 @@ El usuario mediante teclado intenta adivinar el número mientras el ordenador lo
 
 La máquina y el usuario funcionan como la clase jugador, que cuetna conun número y el nombre, que utilizaremos para posteriormente
 identificar que función usar según si somos la maáquina o un usuario.
+
+Además da la oopción de jugar las partidas que queramos.
