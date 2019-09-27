@@ -16,10 +16,10 @@ class ExchangeAPIClient:
         self.rates = rates
 
     def convierte(self):
-        with open('/home/alumno/Escritorio/Practica 2/divisas.txt', mode='r') as csv_file:
+        with open('divisas.txt', mode='r') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             conv = 0
-            f = open('/home/alumno/Escritorio/Practica 2/ahorros.txt', 'a')
+            f = open('ahorros.txt', 'a')
 
             for row in csv_reader:
                 conv = conv + (float(row[1]) / (self.rates['rates'][row[0]]))
