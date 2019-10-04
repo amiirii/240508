@@ -10,7 +10,7 @@ def mostrar_info():
     query = ("select * from sqlite_master where type='table';")
     c = conn.execute(query)
     res = c.fetchall()
-    return [res[1] for row in res]
+    return str([row[1] for row in res])
 
 @app.route("/tables/<sr>")
 def mostrar_tablas(sr):
@@ -18,7 +18,7 @@ def mostrar_tablas(sr):
     query = ("SELECT * FROM " + sr + ";")
     c = conn.execute(query)
     res = c.fetchall()
-    return [res[1] for row in res]
+    return srt([row[1] for row in res])
 
 if __name__ == "__main__":
     app.run()
