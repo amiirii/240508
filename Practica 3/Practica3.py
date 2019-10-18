@@ -3,7 +3,7 @@ import sqlite3
 import json
 
 app = Flask(__name__)
-@app.route("/tables")
+@app.route("/tablas")
 
 def mostrar_nombres():
     conn = sqlite3.connect("ejemplo.db")
@@ -14,7 +14,7 @@ def mostrar_nombres():
     r.headers["Content-Type"] = "application/json"
     return r
 
-@app.route("/tables/<sr>")
+@app.route("/tablas/<sr>")
 def mostrar_tablas(sr):
     conn = sqlite3.connect("ejemplo.db")
     query = ("SELECT * FROM " + sr + ";")
@@ -26,7 +26,7 @@ def mostrar_tablas(sr):
     r.headers["Content-Type"] = "application/json"
     return r
 
-@app.route("/tables/<sr>/info")
+@app.route("/tablas/<sr>/info")
 def mostrar_info(sr):
     conn = sqlite3.connect("ejemplo.db")
     query = ("SELECT * FROM " + sr + ";")
